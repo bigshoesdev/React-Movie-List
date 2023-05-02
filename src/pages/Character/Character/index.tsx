@@ -1,9 +1,11 @@
 import { FC, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
+import { isEmpty } from 'lodash';
 import api from '../../../services/api';
 import { Character as CharacterType } from '../../../types';
-import List from './styles/List';
 import Charactertem from '../../../components/List/CharacterItem';
+import List from '../../../styles/List';
+import Loading from '../../../components/Loading/Loading';
 
 const Character: FC = () => {
   const navigate = useNavigate();
@@ -17,6 +19,8 @@ const Character: FC = () => {
   }, []);
 
   const handleClick = (id: string): void => navigate(`/game/:${id}`);
+
+  if (isEmpty(characters)) return <Loading />;
 
   return (
     <List>

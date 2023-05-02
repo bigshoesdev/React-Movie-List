@@ -7,7 +7,6 @@ import { Movie, Quote } from '../../../types';
 import { Image } from './styles/Image';
 import Detail from './Detail';
 
-
 type QuoteItemProps = {
   item: Quote;
   onClick: (id: string) => void;
