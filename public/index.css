@@ -1,0 +1,8 @@
+body, html{
+    font-family: bicyclette, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+}
+.rsis-image, .rsis-image + div{
+    background-position: center !important;
+}
